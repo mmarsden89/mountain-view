@@ -3,4 +3,33 @@
   background-color: lightblue;
   width: 100vw;
   height: 100vh;
+  overflow: hidden !important;
+  animation: skychange 60s linear infinite;
+}
+
+@keyframes skychange {
+  0% {
+    background-color: lightblue;
+  }
+  25% {
+    background: lightblue;
+  }
+  30% {
+    background-color: orange;
+  }
+  40% {
+    background-color: rgb(37, 1, 37);
+  }
+  60% {
+    background-color: rgb(37, 1, 37);
+  }
+  70% {
+    background-color: orange;
+  }
+  75% {
+    background-color: lightblue;
+  }
+  100% {
+    background-color: lightblue;
+  }
 }

@@ -1,3 +1,6 @@
+$cloud-color: #e4eff3;
+// $cloud-color: green;
+
 .mountain-container {
   width: 100vw;
 }
@@ -139,4 +142,26 @@
 .wide-cap-6 {
   left: 275px;
   border-right: 31px solid transparent;
+}
+
+.cloud-bg {
+  position: absolute;
+  top: 45vh;
+  left: 10vw;
+}
+.cloud-bg::before {
+  content: "";
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  background-color: $cloud-color;
+  bottom: 110%;
+  left: 250px;
+  border-radius: 50%;
+  box-shadow: -200px 20px 0 4em $cloud-color, -290px 100px 0 4em $cloud-color,
+    75px 100px 0 5em $cloud-color, 220px 120px 0 5em $cloud-color,
+    250px 25px 0 4em $cloud-color, 370px 25px 0 5em $cloud-color,
+    400px 125px 0 5em $cloud-color, 500px 50px 0 4em $cloud-color,
+    590px 75px 0 4em $cloud-color, 690px 75px 0 3em $cloud-color,
+    780px 75px 0 4em $cloud-color, 840px 125px 0 3em $cloud-color;
 }

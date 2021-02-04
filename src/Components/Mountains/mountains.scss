@@ -3,6 +3,10 @@ $cloud-color: #e4eff3;
 
 .mountain-container {
   width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .single-mountain {
@@ -114,6 +118,7 @@ $cloud-color: #e4eff3;
 .wide-cap-4,
 .wide-cap-5,
 .wide-cap-6 {
+  z-index: 10;
   position: absolute;
   top: 133px;
   border-left: 35px solid transparent;
@@ -244,4 +249,83 @@ $cloud-color: #e4eff3;
   100% {
     transform: translateY(11%) scaleY(0.2);
   }
+}
+
+.moving-cloud {
+  z-index: 4;
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 25px;
+  height: 10px;
+  width: 100px;
+  background-color: white;
+  top: 370px;
+  left: 100px;
+  animation: moving-cloud 60s linear infinite;
+}
+
+.moving-cloud::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -25px;
+  left: 20px;
+}
+
+.moving-cloud::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -18px;
+  left: 50px;
+}
+
+@keyframes moving-cloud {
+  0% {
+    transform: translateX(1200%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+.moving-cloud2 {
+  z-index: 4;
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 25px;
+  height: 10px;
+  width: 150px;
+  background-color: white;
+  top: 370px;
+  left: 400px;
+  animation: moving-cloud 60s linear infinite;
+}
+
+.moving-cloud2::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -25px;
+  left: 20px;
+}
+
+.moving-cloud2::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -18px;
+  left: 50px;
 }

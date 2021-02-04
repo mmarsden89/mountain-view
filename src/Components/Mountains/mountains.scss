@@ -1,5 +1,4 @@
-$cloud-color: #e4eff3;
-// $cloud-color: green;
+$cloud-color: rgb(227, 238, 242);
 
 .mountain-container {
   width: 100vw;
@@ -17,7 +16,7 @@ $cloud-color: #e4eff3;
   border-left: 165px solid transparent;
   border-right: 165px solid transparent;
   border-bottom: 230px solid #7ac1e4;
-  z-index: 3;
+  z-index: 5;
 }
 
 .single-mountain::before {
@@ -36,6 +35,7 @@ $cloud-color: #e4eff3;
 .mountain-cap-4,
 .mountain-cap-5,
 .mountain-cap-6 {
+  width: 5px;
   position: absolute;
   top: 232px;
   border-left: 25px solid transparent;
@@ -62,7 +62,7 @@ $cloud-color: #e4eff3;
 
 .mountain-cap-6 {
   left: 225px;
-  border-right: 23px solid transparent;
+  border-right: 18px solid transparent;
 }
 
 .foreground-container {
@@ -76,7 +76,7 @@ $cloud-color: #e4eff3;
 .foreground-left {
   border-bottom: 350px solid #132025;
   border-right: 500px solid transparent;
-  z-index: 5 !important;
+  z-index: 5;
   position: absolute;
   bottom: 0;
 }
@@ -84,7 +84,7 @@ $cloud-color: #e4eff3;
 .foreground-right {
   border-bottom: 200px solid #132025;
   border-left: 450px solid transparent;
-  z-index: 5 !important;
+  z-index: 5;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -118,6 +118,7 @@ $cloud-color: #e4eff3;
 .wide-cap-4,
 .wide-cap-5,
 .wide-cap-6 {
+  width: 5px;
   z-index: 10;
   position: absolute;
   top: 133px;
@@ -146,12 +147,12 @@ $cloud-color: #e4eff3;
 
 .wide-cap-6 {
   left: 275px;
-  border-right: 31px solid transparent;
+  border-right: 26px solid transparent;
 }
 
 .cloud-bg {
   position: absolute;
-  top: 45vh;
+  top: 46vh;
   left: 10vw;
 }
 .cloud-bg::before {
@@ -169,6 +170,7 @@ $cloud-color: #e4eff3;
     400px 125px 0 5em $cloud-color, 500px 50px 0 4em $cloud-color,
     590px 75px 0 4em $cloud-color, 690px 75px 0 3em $cloud-color,
     780px 75px 0 4em $cloud-color, 840px 125px 0 3em $cloud-color;
+  opacity: 0.5;
 }
 
 .tree {
@@ -252,7 +254,7 @@ $cloud-color: #e4eff3;
 }
 
 .moving-cloud {
-  z-index: 4;
+  z-index: 5;
   position: absolute;
   border: 5px solid white;
   border-radius: 25px;
@@ -262,6 +264,7 @@ $cloud-color: #e4eff3;
   top: 370px;
   left: 100px;
   animation: moving-cloud 60s linear infinite;
+  opacity: 0;
 }
 
 .moving-cloud::before {
@@ -289,23 +292,27 @@ $cloud-color: #e4eff3;
 @keyframes moving-cloud {
   0% {
     transform: translateX(1200%);
+    opacity: 0.7;
   }
   100% {
     transform: translateX(-500%);
+    opacity: 0.7;
   }
 }
 
 .moving-cloud2 {
-  z-index: 4;
+  z-index: 5;
   position: absolute;
   border: 5px solid white;
   border-radius: 25px;
   height: 10px;
   width: 150px;
   background-color: white;
-  top: 370px;
+  top: 350px;
   left: 400px;
   animation: moving-cloud 60s linear infinite;
+  animation-delay: 5s;
+  opacity: 0;
 }
 
 .moving-cloud2::before {
@@ -322,10 +329,58 @@ $cloud-color: #e4eff3;
 .moving-cloud2::after {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: 55px;
+  width: 55px;
   background-color: inherit;
   border-radius: 50%;
-  top: -18px;
+  top: -43px;
   left: 50px;
+}
+
+.moving-cloud3 {
+  z-index: 4;
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 25px;
+  height: 10px;
+  width: 150px;
+  background-color: white;
+  top: 350px;
+  left: 200px;
+  animation: moving-cloud3 70s linear infinite;
+  animation-delay: 9s;
+  opacity: 0;
+}
+
+.moving-cloud3::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -25px;
+  left: 20px;
+}
+
+.moving-cloud3::after {
+  content: "";
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -43px;
+  left: 50px;
+}
+
+@keyframes moving-cloud3 {
+  0% {
+    transform: translateX(1300%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-600%);
+    opacity: 0.7;
+  }
 }

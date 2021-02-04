@@ -8,10 +8,12 @@ const Mountains = () => {
     <div className="mountain-container">
       <div class="cloud-bg"></div>
       <WideMountain />
+      <div className="moving-cloud3"></div>
       <SingleMountain />
       <Foreground />
       <div className="moving-cloud"></div>
       <div className="moving-cloud2"></div>
+      <div className="moving-cloud3"></div>
       <div className="wave"></div>
       <div className="foreground-left"></div>
       <div className="foreground-right"></div>

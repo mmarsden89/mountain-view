@@ -10,8 +10,11 @@ const Mountains = () => {
       <WideMountain />
       <SingleMountain />
       <Foreground />
+      <div className="wave"></div>
       <div className="foreground-left"></div>
       <div className="foreground-right"></div>
+      <div class="tree"></div>
+      <div class="tree2"></div>
     </div>
   );
 };

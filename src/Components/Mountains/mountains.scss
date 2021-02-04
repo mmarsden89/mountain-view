@@ -165,3 +165,83 @@ $cloud-color: #e4eff3;
     590px 75px 0 4em $cloud-color, 690px 75px 0 3em $cloud-color,
     780px 75px 0 4em $cloud-color, 840px 125px 0 3em $cloud-color;
 }
+
+.tree {
+  z-index: 5;
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid #132025;
+  right: 50px;
+  bottom: 220px;
+}
+
+.tree::before {
+  content: "";
+  position: absolute;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 60px solid #132025;
+  top: 25px;
+  left: -40px;
+}
+
+.tree::after {
+  content: "";
+  position: absolute;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 75px solid #132025;
+  top: 50px;
+  left: -50px;
+}
+
+.tree2 {
+  z-index: 5;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 50px solid #132025;
+  left: 100px;
+  bottom: 330px;
+}
+
+.tree2::before {
+  content: "";
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #132025;
+  top: 25px;
+  left: -30px;
+}
+
+.tree2::after {
+  content: "";
+  position: absolute;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 75px solid #132025;
+  top: 55px;
+  left: -40px;
+}
+
+.wave {
+  position: absolute;
+  border-top: 25px solid rgba(255, 255, 255, 0.1);
+  height: 1000px;
+  left: 250px;
+  width: 1000px;
+  //   transform: translateY(1%);
+  animation: wave 10s ease-out infinite;
+  overflow: hidden;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(70%) scaleY(1);
+  }
+  100% {
+    transform: translateY(11%) scaleY(0.2);
+  }
+}

@@ -1,9 +1,10 @@
 import "./App.css";
-import { Mountains } from "./Components/index";
+import { Mountains, CelestialContainer } from "./Components/index";
 
 function App() {
   return (
     <div className="App">
+      <CelestialContainer />
       <Mountains />
     </div>
   );

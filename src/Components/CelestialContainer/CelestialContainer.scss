@@ -1,0 +1,40 @@
+.celestial-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.moon-container,
+.sun-container {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 80%;
+}
+
+.moon {
+}
+
+.sun {
+  z-index: 10;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+  // top: 100%;
+  // top: 0;
+}
+
+.sun-container {
+  animation: sunpath 180s linear infinite;
+}
+
+@keyframes sunpath {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}

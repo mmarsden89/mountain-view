@@ -14,12 +14,47 @@
 }
 
 .moon {
-  // z-index: 10;
   position: absolute;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background-color: rgb(218, 213, 213);
+  overflow: hidden;
+  animation: moonrotate 180s linear infinite;
+}
+
+@keyframes moonrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-160deg);
+  }
+  100% {
+    transform: rotate(-160deg);
+  }
+}
+
+.moon-shadow {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  animation: moonshadow 360s linear infinite;
+  background-color: rgba(77, 76, 76, 0.8);
+}
+
+@keyframes moonshadow {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .crater {
@@ -63,6 +98,23 @@
 }
 
 .moon-container {
+  animation: moonpath 180s linear infinite;
+}
+
+@keyframes moonpath {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 
 .sun {
@@ -82,27 +134,6 @@
 }
 
 @keyframes sunpath {
-  0% {
-    transform: rotate(70deg);
-  }
-  30% {
-    transform: rotate(150deg);
-  }
-  31% {
-    transform: rotate(200deg);
-  }
-  69% {
-    transform: rotate(200deg);
-  }
-  70% {
-    transform: rotate(380deg);
-  }
-  100% {
-    transform: rotate(430deg);
-  }
-}
-
-@keyframes moonpath {
   0% {
     transform: rotate(70deg);
   }

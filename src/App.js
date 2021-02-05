@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <CelestialContainer />
-      {/* <Mountains /> */}
+      <Mountains />
     </div>
   );
 }

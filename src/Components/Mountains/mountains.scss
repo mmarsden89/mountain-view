@@ -246,10 +246,10 @@ $cloud-color: rgb(227, 238, 242);
 
 @keyframes wave {
   0% {
-    transform: translateY(70%) scaleY(1);
+    transform: translateY(70%) scaleY(1) rotate(-1deg);
   }
   100% {
-    transform: translateY(11%) scaleY(0.2);
+    transform: translateY(11%) scaleY(0.2) rotate(-1deg);
   }
 }
 
@@ -263,7 +263,7 @@ $cloud-color: rgb(227, 238, 242);
   background-color: white;
   top: 370px;
   left: 100px;
-  animation: moving-cloud 60s linear infinite;
+  animation: moving-cloud 100s linear infinite;
   opacity: 0;
 }
 
@@ -310,7 +310,7 @@ $cloud-color: rgb(227, 238, 242);
   background-color: white;
   top: 350px;
   left: 400px;
-  animation: moving-cloud 60s linear infinite;
+  animation: moving-cloud 90s linear infinite;
   animation-delay: 5s;
   opacity: 0;
 }
@@ -347,7 +347,7 @@ $cloud-color: rgb(227, 238, 242);
   background-color: white;
   top: 310px;
   left: 230px;
-  animation: moving-cloud3 70s linear infinite;
+  animation: moving-cloud3 110s linear infinite;
   animation-delay: 9s;
   opacity: 0;
 }

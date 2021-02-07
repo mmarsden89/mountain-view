@@ -233,26 +233,6 @@ $cloud-color: rgb(227, 238, 242);
   left: -40px;
 }
 
-.wave {
-  position: absolute;
-  border-top: 25px solid rgba(255, 255, 255, 0.1);
-  height: 1000px;
-  left: 250px;
-  width: 1000px;
-  //   transform: translateY(1%);
-  animation: wave 10s ease-out infinite;
-  overflow: hidden;
-}
-
-@keyframes wave {
-  0% {
-    transform: translateY(70%) scaleY(1) rotate(-1deg);
-  }
-  100% {
-    transform: translateY(11%) scaleY(0.2) rotate(-1deg);
-  }
-}
-
 .moving-cloud {
   z-index: 5;
   position: absolute;

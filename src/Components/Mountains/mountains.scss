@@ -1,4 +1,4 @@
-$cloud-color: rgb(227, 238, 242);
+$cloud-color: rgb(210, 222, 226);
 
 .mountain-container {
   width: 100vw;
@@ -9,8 +9,8 @@ $cloud-color: rgb(227, 238, 242);
 }
 
 .single-mountain {
-  width: 20vw;
-  height: 35vh;
+  width: 273px;
+  height: 232px;
   position: absolute;
   bottom: 20vh;
   border-left: 165px solid transparent;
@@ -91,8 +91,8 @@ $cloud-color: rgb(227, 238, 242);
 }
 
 .wide-mountain {
-  width: 25vw;
-  height: 20vh;
+  width: 343px;
+  height: 135px;
   position: absolute;
   right: -10%;
   bottom: 20vh;

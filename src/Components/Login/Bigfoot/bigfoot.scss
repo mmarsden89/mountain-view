@@ -1,5 +1,37 @@
+$dark-brown: #775d46;
+$light-brown: #c5b697;
+$black: #383838;
+
 .bigfoot-container {
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   top: 0;
+}
+
+.head {
+  width: 180px;
+  height: 200px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  background-color: $dark-brown;
+  border: 10px solid $black;
+}
+
+.eye-container {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 180px;
+  justify-content: space-around;
+}
+
+.eye1,
+.eye2 {
+  background-color: $black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }

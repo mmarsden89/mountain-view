@@ -6,7 +6,31 @@ $black: #383838;
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  overflow: hidden;
+}
+
+.body-container {
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 90px);
+}
+
+.ear1,
+.ear2 {
+  background-color: $light-brown;
+  border: 10px solid $black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ear1 {
+  left: -3px;
+}
+
+.ear2 {
+  left: 130px;
 }
 
 .head {
@@ -16,11 +40,12 @@ $black: #383838;
   border-top-right-radius: 100%;
   background-color: $dark-brown;
   border: 10px solid $black;
+  position: absolute;
 }
 
 .eye-container {
   position: absolute;
-  top: 80px;
+  top: 60px;
   left: 10px;
   display: flex;
   flex-direction: row;
@@ -34,4 +59,88 @@ $black: #383838;
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+.mouth-container {
+  height: 80px;
+  width: 100px;
+  background-color: $light-brown;
+  position: absolute;
+  top: 80px;
+  border-radius: 50%;
+  left: 50px;
+}
+
+.nose {
+  height: 25px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $black;
+  left: 30px;
+  position: absolute;
+}
+
+.mouth {
+  width: 60px;
+  height: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid $black;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+.mouth-line {
+  width: 10px;
+  height: 30px;
+  background-color: $black;
+  position: absolute;
+  left: 45px;
+  top: 20px;
+}
+
+.signin-bar {
+  width: 225px;
+  height: 55px;
+  background-color: white;
+  border: 10px solid $black;
+  border-radius: 15px;
+  top: 60%;
+  left: calc(50% - 105px);
+  position: absolute;
+  color: $black;
+  font-weight: 900;
+  font-size: 24px;
+  animation: signinbar 2s linear;
+}
+
+@keyframes signinbar {
+  0% {
+    top: 25%;
+    opacity: 0;
+  }
+  10% {
+    top: 25%;
+    opacity: 1;
+  }
+  15% {
+    top: 25%;
+  }
+  25% {
+    top: 28%;
+  }
+  35% {
+    top: 25%;
+  }
+  45% {
+    top: 32%;
+  }
+  55% {
+    top: 25%;
+  }
+  100% {
+    top: 60%;
+  }
 }

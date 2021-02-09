@@ -1,3 +1,4 @@
+import React, { Form } from "react";
 import "./bigfoot.scss";
 
 const Bigfoot = () => {
@@ -18,7 +19,7 @@ const Bigfoot = () => {
         </div>
       </div>
       <div className="signin-form">
-        <form>
+        <Form>
           <label>
             username
             <input type="text" name="username" />
@@ -27,7 +28,7 @@ const Bigfoot = () => {
             password
             <input type="text" name="password" />
           </label>
-        </form>
+        </Form>
       </div>
       <div className="signin-bar">
         <div className="signin-text">sign in</div>

@@ -6,7 +6,7 @@ import Foreground from "./Foreground";
 const Mountains = () => {
   return (
     <div className="mountain-container">
-      <div class="cloud-bg"></div>
+      <div className="cloud-bg"></div>
       <WideMountain />
       <div className="moving-cloud3"></div>
       <SingleMountain />
@@ -16,8 +16,8 @@ const Mountains = () => {
       <div className="moving-cloud3"></div>
       <div className="foreground-left"></div>
       <div className="foreground-right"></div>
-      <div class="tree"></div>
-      <div class="tree2"></div>
+      <div className="tree"></div>
+      <div className="tree2"></div>
     </div>
   );
 };

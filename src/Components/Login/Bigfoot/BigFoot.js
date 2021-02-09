@@ -17,7 +17,23 @@ const Bigfoot = () => {
           <div className="mouth"></div>
         </div>
       </div>
-      <button className="signin-bar">sign in</button>
+      <div className="signin-form">
+        <form>
+          <label>
+            username
+            <input type="text" name="username" />
+          </label>
+          <label>
+            password
+            <input type="text" name="password" />
+          </label>
+        </form>
+      </div>
+      <div className="signin-bar">
+        <div className="signin-text">sign in</div>
+        <div className="left-paw"></div>
+        <div className="right-paw"></div>
+      </div>
     </div>
   );
 };

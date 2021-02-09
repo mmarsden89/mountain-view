@@ -19,8 +19,14 @@ const Bigfoot = () => {
       </div>
       <div className="signin-form">
         <form>
-          <input type="text" name="username" placeholder="email@example.com" />
-          <input type="password" name="password" placeholder="password" />
+          <label>
+            email
+            <input type="text" name="email" placeholder="email@example.com" />
+          </label>
+          <label>
+            password
+            <input type="password" name="password" placeholder="password" />
+          </label>
         </form>
       </div>
       <div className="signin-bar">

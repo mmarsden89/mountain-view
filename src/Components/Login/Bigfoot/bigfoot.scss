@@ -54,7 +54,7 @@ $black: #383838;
 
 .ear1,
 .ear2 {
-  background-color: $light-brown;
+  background-color: $dark-brown;
   border: 10px solid $black;
   width: 50px;
   height: 50px;
@@ -62,12 +62,32 @@ $black: #383838;
   position: absolute;
 }
 
+.ear1::after,
+.ear2::after {
+  content: "";
+  background-color: $light-brown;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
 .ear1 {
   left: -3px;
 }
 
+.ear1::after {
+  top: 10px;
+  left: 10px;
+}
+
 .ear2 {
   left: 130px;
+}
+
+.ear2::after {
+  top: 10px;
+  left: 10px;
 }
 
 .head {
@@ -78,6 +98,18 @@ $black: #383838;
   background-color: $dark-brown;
   border: 10px solid $black;
   position: absolute;
+}
+
+.head::after {
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: $light-brown;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50px);
 }
 
 .eye-container {
@@ -231,9 +263,20 @@ $black: #383838;
 
 form {
   height: 100%;
-  width: 100%;
-  // margin-top: 50px;
+  width: 80%;
+  padding-top: 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+input {
+  border: 3px solid $black;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

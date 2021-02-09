@@ -1,6 +1,7 @@
 import "./bigfoot.scss";
 
-const Bigfoot = () => {
+const Bigfoot = (props) => {
+  const { handleLogin } = props;
   return (
     <div className="bigfoot-container">
       <div className="body-container">
@@ -33,6 +34,9 @@ const Bigfoot = () => {
         <div className="signin-text">sign in</div>
         <div className="left-paw"></div>
         <div className="right-paw"></div>
+      </div>
+      <div className="x" onClick={handleLogin}>
+        x
       </div>
     </div>
   );

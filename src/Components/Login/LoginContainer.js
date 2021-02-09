@@ -13,7 +13,7 @@ const LoginContainer = () => {
   return (
     <div className="login-container">
       {!login && <LoginButton handleLogin={handleLogin} />}
-      {login && <Bigfoot />}
+      {login && <Bigfoot handleLogin={handleLogin} />}
     </div>
   );
 };

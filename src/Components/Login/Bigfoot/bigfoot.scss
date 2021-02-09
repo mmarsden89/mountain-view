@@ -228,3 +228,12 @@ $black: #383838;
   left: calc(50% - 135px);
   border-radius: 25px;
 }
+
+form {
+  height: 100%;
+  width: 100%;
+  // margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

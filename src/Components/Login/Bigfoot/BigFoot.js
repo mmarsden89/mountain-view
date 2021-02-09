@@ -1,14 +1,34 @@
+import React, { useState } from "react";
 import "./bigfoot.scss";
 
 const Bigfoot = (props) => {
   const { handleLogin } = props;
+  const [email, setEmail] = useState("");
+  const [emailLength, setEmailLength] = useState(10);
+
+  const handleEmailLength = (length) => {
+    console.log(!isNaN(length), emailLength);
+    const value = !isNaN(length) ? length : emailLength;
+    setEmailLength(length);
+  };
+
+  const handleFocusOut = () => {
+    setEmailLength(10);
+  };
+
+  const handleEmail = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+    handleEmailLength(value.length);
+  };
+
   return (
     <div className="bigfoot-container">
       <div className="body-container">
         <div className="ear1"></div>
         <div className="ear2"></div>
         <div className="head"></div>
-        <div className="eye-container">
+        <div className="eye-container" style={{ left: `${emailLength}px` }}>
           <div className="eye1"></div>
           <div className="eye2"></div>
         </div>
@@ -22,7 +42,14 @@ const Bigfoot = (props) => {
         <form>
           <label>
             email
-            <input type="text" name="email" placeholder="email@example.com" />
+            <input
+              type="text"
+              name="email"
+              placeholder="email@example.com"
+              onChange={handleEmail}
+              onFocus={handleEmailLength}
+              onBlur={handleFocusOut}
+            />
           </label>
           <label>
             password

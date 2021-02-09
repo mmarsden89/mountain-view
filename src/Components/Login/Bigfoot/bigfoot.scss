@@ -1,6 +1,7 @@
 $dark-brown: #775d46;
 $light-brown: #c5b697;
 $black: #383838;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap");
 
 .bigfoot-container {
   z-index: 10;
@@ -405,6 +406,7 @@ input {
   border-radius: 5px;
   font-weight: 700;
   color: $black;
+  font-family: "Source Code Pro", monospace;
 }
 
 label {

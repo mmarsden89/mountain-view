@@ -8,8 +8,12 @@ const Bigfoot = (props) => {
   const [password, setPassword] = useState("");
   const [passwordActive, setPasswordActive] = useState(false);
   const [emailActive, setEmailActive] = useState(false);
+  const [errorActive, setErrorActive] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(
+    "please enter your email/password"
+  );
 
-  useEffect(() => {}, [emailActive]);
+  useEffect(() => {}, [emailActive, errorMessage, password]);
 
   const handleEmailLength = (length) => {
     const value = !isNaN(length) ? length : emailLength;
@@ -19,10 +23,12 @@ const Bigfoot = (props) => {
   };
 
   const handleFocusOut = () => {
+    setErrorActive(false);
     setEmailActive(false);
   };
 
   const handlePasswordOut = () => {
+    setErrorActive(false);
     setPasswordActive(false);
   };
 
@@ -31,12 +37,28 @@ const Bigfoot = (props) => {
     setEmail(value);
     handleEmailLength(value.length);
     setEmailActive(true);
+    setErrorActive(false);
   };
 
   const handlePassword = (event) => {
     const { value } = event.target;
     setPassword(value);
     setPasswordActive(true);
+    setErrorActive(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!email.includes("@") || !email.includes(".com")) {
+      setErrorMessage("please enter a valid email address");
+      setErrorActive(true);
+    } else if (!password.length > 0) {
+      setErrorMessage("please enter a valid password");
+      setErrorActive(true);
+    } else {
+      setErrorMessage(false);
+    }
+    setPasswordActive(false);
   };
 
   return (
@@ -68,7 +90,7 @@ const Bigfoot = (props) => {
         )}
       </div>
       <div className="signin-form">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>
             email
             <input
@@ -91,9 +113,10 @@ const Bigfoot = (props) => {
               onBlur={handlePasswordOut}
             />
           </label>
+          <input type="submit" style={{ display: "none" }} />
         </form>
       </div>
-      <div className="signin-bar">
+      <div className="signin-bar" onClick={handleSubmit}>
         <div className="signin-text">sign in</div>
         {!passwordActive && <div className="left-paw"></div>}
         {!passwordActive && <div className="right-paw"></div>}
@@ -101,6 +124,11 @@ const Bigfoot = (props) => {
       <div className="x" onClick={handleLogin}>
         x
       </div>
+      {errorActive && (
+        <div className="error-message-container">
+          <div className="error-message">{errorMessage}</div>
+        </div>
+      )}
     </div>
   );
 };

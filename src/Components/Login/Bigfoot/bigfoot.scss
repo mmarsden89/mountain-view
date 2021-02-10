@@ -481,3 +481,47 @@ label {
   border-top-right-radius: 25%;
   transform: rotate(-15deg);
 }
+
+.error-message-container {
+  position: absolute;
+  height: 55px;
+  width: 270px;
+  top: 165px;
+  left: calc(50% - 135px);
+  overflow: hidden;
+  // background-color: green;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.error-message {
+  height: 35px;
+  width: 250px;
+  border-radius: 20px;
+  background-color: white;
+  z-index: 9;
+  font-weight: 900;
+  color: $black;
+  border: 10px solid $black;
+  animation: errorMessage 2s linear;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+@keyframes errorMessage {
+  0% {
+    top: -50px;
+    opacity: 1;
+  }
+  25% {
+    top: 0px;
+  }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+}

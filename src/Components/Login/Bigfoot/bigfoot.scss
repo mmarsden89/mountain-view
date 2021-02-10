@@ -220,6 +220,7 @@ $black: #383838;
   width: 180px;
   justify-content: space-around;
   animation: fadein 2s linear;
+  transition: 0.5s;
 }
 
 @keyframes fadein {

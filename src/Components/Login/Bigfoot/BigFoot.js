@@ -47,7 +47,10 @@ const Bigfoot = (props) => {
         <div className="head"></div>
         <div
           className="eye-container"
-          style={{ left: `${emailActive ? emailLength : 10}px` }}
+          style={{
+            left: `${emailActive ? emailLength : 10}px`,
+            top: `${emailActive ? 65 : 60}px`,
+          }}
         >
           <div className="eye1"></div>
           <div className="eye2"></div>
@@ -73,7 +76,7 @@ const Bigfoot = (props) => {
               name="email"
               placeholder="email@example.com"
               onChange={handleEmail}
-              onFocus={handleEmailLength}
+              onFocus={handleEmail}
               onBlur={handleFocusOut}
             />
           </label>

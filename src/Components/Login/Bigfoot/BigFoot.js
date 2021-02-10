@@ -5,6 +5,8 @@ const Bigfoot = (props) => {
   const { handleLogin } = props;
   const [email, setEmail] = useState("");
   const [emailLength, setEmailLength] = useState(10);
+  const [password, setPassword] = useState("");
+  const [passwordActive, setPasswordActive] = useState(false);
 
   const handleEmailLength = (length) => {
     const value = !isNaN(length) ? length : emailLength;
@@ -17,10 +19,20 @@ const Bigfoot = (props) => {
     setEmailLength(10);
   };
 
+  const handlePasswordOut = () => {
+    setPasswordActive(false);
+  };
+
   const handleEmail = (event) => {
     const { value } = event.target;
     setEmail(value);
     handleEmailLength(value.length);
+  };
+
+  const handlePassword = (event) => {
+    const { value } = event.target;
+    setPassword(value);
+    setPasswordActive(true);
   };
 
   return (
@@ -38,6 +50,12 @@ const Bigfoot = (props) => {
           <div className="mouth-line"></div>
           <div className="mouth"></div>
         </div>
+        {passwordActive && (
+          <div className="password-paw-container">
+            <div className="password-paw-left"></div>
+            <div className="password-paw-right"></div>
+          </div>
+        )}
       </div>
       <div className="signin-form">
         <form>
@@ -54,14 +72,21 @@ const Bigfoot = (props) => {
           </label>
           <label>
             password
-            <input type="password" name="password" placeholder="password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              onChange={handlePassword}
+              onBlur={handlePasswordOut}
+              onFocus={handlePassword}
+            />
           </label>
         </form>
       </div>
       <div className="signin-bar">
         <div className="signin-text">sign in</div>
-        <div className="left-paw"></div>
-        <div className="right-paw"></div>
+        {!passwordActive && <div className="left-paw"></div>}
+        {!passwordActive && <div className="right-paw"></div>}
       </div>
       <div className="x" onClick={handleLogin}>
         x

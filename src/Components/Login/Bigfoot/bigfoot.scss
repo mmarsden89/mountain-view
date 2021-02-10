@@ -450,3 +450,33 @@ label {
   color: $black;
   cursor: pointer;
 }
+
+.password-paw-container {
+  position: absolute;
+}
+
+.password-paw-left {
+  position: absolute;
+  height: 175px;
+  width: 50px;
+  background-color: $dark-brown;
+  border: 10px solid $black;
+  left: 10px;
+  top: 30px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  transform: rotate(15deg);
+}
+
+.password-paw-right {
+  position: absolute;
+  height: 175px;
+  width: 50px;
+  background-color: $dark-brown;
+  border: 10px solid $black;
+  left: 120px;
+  top: 30px;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 25%;
+  transform: rotate(-15deg);
+}

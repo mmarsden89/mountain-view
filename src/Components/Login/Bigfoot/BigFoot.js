@@ -7,9 +7,10 @@ const Bigfoot = (props) => {
   const [emailLength, setEmailLength] = useState(10);
 
   const handleEmailLength = (length) => {
-    console.log(!isNaN(length), emailLength);
     const value = !isNaN(length) ? length : emailLength;
-    setEmailLength(length);
+    if (value < 19) {
+      setEmailLength(value);
+    }
   };
 
   const handleFocusOut = () => {

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./bigfoot.scss";
 
 const Bigfoot = (props) => {
   const { handleLogin } = props;
   const [email, setEmail] = useState("");
-  const [emailLength, setEmailLength] = useState(10);
+  const [emailLength, setEmailLength] = useState(1);
   const [password, setPassword] = useState("");
   const [passwordActive, setPasswordActive] = useState(false);
+  const [emailActive, setEmailActive] = useState(false);
+
+  useEffect(() => {}, [emailActive]);
 
   const handleEmailLength = (length) => {
     const value = !isNaN(length) ? length : emailLength;
@@ -16,7 +19,7 @@ const Bigfoot = (props) => {
   };
 
   const handleFocusOut = () => {
-    setEmailLength(10);
+    setEmailActive(false);
   };
 
   const handlePasswordOut = () => {
@@ -27,6 +30,7 @@ const Bigfoot = (props) => {
     const { value } = event.target;
     setEmail(value);
     handleEmailLength(value.length);
+    setEmailActive(true);
   };
 
   const handlePassword = (event) => {
@@ -41,7 +45,10 @@ const Bigfoot = (props) => {
         <div className="ear1"></div>
         <div className="ear2"></div>
         <div className="head"></div>
-        <div className="eye-container" style={{ left: `${emailLength}px` }}>
+        <div
+          className="eye-container"
+          style={{ left: `${emailActive ? emailLength : 10}px` }}
+        >
           <div className="eye1"></div>
           <div className="eye2"></div>
         </div>
@@ -77,8 +84,8 @@ const Bigfoot = (props) => {
               name="password"
               placeholder="password"
               onChange={handlePassword}
-              onBlur={handlePasswordOut}
               onFocus={handlePassword}
+              onBlur={handlePasswordOut}
             />
           </label>
         </form>

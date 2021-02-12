@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./bigfoot.scss";
+import "./bear.scss";
 
-const Bigfoot = (props) => {
+const Bear = (props) => {
   const { handleLogin } = props;
   const [email, setEmail] = useState("");
   const [emailLength, setEmailLength] = useState(1);
@@ -133,4 +133,4 @@ const Bigfoot = (props) => {
   );
 };
 
-export default Bigfoot;
+export default Bear;

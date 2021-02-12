@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./loginContainer.scss";
 import LoginButton from "./LoginButton";
-import Bigfoot from "./Bigfoot/Bigfoot";
+import Bear from "./Bear/Bear";
 
 const LoginContainer = () => {
   const [login, setLogin] = useState(false);
@@ -13,7 +13,7 @@ const LoginContainer = () => {
   return (
     <div className="login-container">
       {!login && <LoginButton handleLogin={handleLogin} />}
-      {login && <Bigfoot handleLogin={handleLogin} />}
+      {login && <Bear handleLogin={handleLogin} />}
     </div>
   );
 };

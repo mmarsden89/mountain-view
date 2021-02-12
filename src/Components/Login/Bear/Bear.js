@@ -121,8 +121,8 @@ const Bear = (props) => {
         {!passwordActive && <div className="left-paw"></div>}
         {!passwordActive && <div className="right-paw"></div>}
       </div>
-      <div className="x" onClick={handleLogin}>
-        x
+      <div className="back" onClick={handleLogin}>
+        back
       </div>
       {errorActive && (
         <div className="error-message-container">

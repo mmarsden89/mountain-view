@@ -12,8 +12,9 @@ const Bear = (props) => {
   const [errorMessage, setErrorMessage] = useState(
     "please enter your email/password"
   );
+  const [successful, setSuccessful] = useState(false);
 
-  useEffect(() => {}, [emailActive, errorMessage, password]);
+  useEffect(() => {}, [successful]);
 
   const handleEmailLength = (length) => {
     const value = !isNaN(length) ? length : emailLength;
@@ -56,6 +57,7 @@ const Bear = (props) => {
       setErrorMessage("please enter a valid password");
       setErrorActive(true);
     } else {
+      setSuccessful(true);
       setErrorMessage(false);
     }
     setPasswordActive(false);
@@ -88,6 +90,12 @@ const Bear = (props) => {
             <div className="password-paw-right"></div>
           </div>
         )}
+        {successful && (
+          <div className="thumb-container">
+            <div className="left-thumb"></div>
+            <div className="right-thumb"></div>
+          </div>
+        )}
       </div>
       <div className="signin-form">
         <form onSubmit={handleSubmit}>
@@ -118,8 +126,8 @@ const Bear = (props) => {
       </div>
       <div className="signin-bar" onClick={handleSubmit}>
         <div className="signin-text">sign in</div>
-        {!passwordActive && <div className="left-paw"></div>}
-        {!passwordActive && <div className="right-paw"></div>}
+        {!passwordActive && !successful && <div className="left-paw"></div>}
+        {!passwordActive && !successful && <div className="right-paw"></div>}
       </div>
       <div className="back" onClick={handleLogin}>
         back

@@ -9,6 +9,7 @@ $cloud-color: rgb(210, 222, 226);
 }
 
 .single-mountain {
+  // display: none;
   width: 273px;
   height: 232px;
   position: absolute;
@@ -362,5 +363,17 @@ $cloud-color: rgb(210, 222, 226);
   100% {
     transform: translateX(-600%);
     opacity: 0.7;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .single-mountain {
+    z-index: 0;
+    bottom: -5vh;
+  }
+
+  .wide-mountain {
+    z-index: 0;
+    bottom: 10vh;
   }
 }

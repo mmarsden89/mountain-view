@@ -155,3 +155,10 @@
     transform: rotate(430deg);
   }
 }
+
+@media screen and (max-height: 500px) {
+  .sun-container,
+  .moon-container {
+    top: 120%;
+  }
+}

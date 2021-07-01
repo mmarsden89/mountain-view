@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <CelestialContainer />
       <Mountains />
-      <LoginContainer />
+      {/* <LoginContainer /> */}
     </div>
   );
 }

@@ -599,3 +599,17 @@ label {
   // border-bottom: none;
   border-radius: 10px 10px 0 0;
 }
+
+@media only screen and (max-width: 1200px) {
+  .bigfoot-container {
+    margin-top: 80px;
+  }
+
+  .body-container {
+    top: 125px;
+  }
+
+  .back {
+    top: 15px;
+  }
+}
